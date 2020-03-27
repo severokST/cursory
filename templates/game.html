@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/GUI.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Objects.css' %}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src={% static "js/game.js" %}></script>
+
+</head>
+<body>
+
+<div class="gui_main_pane" onmousemove="move(event)">
+
+    {% for start in objects.start %}
+        <div class="start" onclick="game_start()" style="left:{{ start.x }}px;top:{{ start.y }}px"></div>
+    {% endfor %}
+
+
+    {% for wall in objects.walls %}
+        <div class="wall" onmouseenter="hit()" style="left:{{ wall.x }}px;top:{{ wall.y }}px"></div>
+    {% endfor %}
+
+hello
+
+
+
+</div>
+
+
+
+</body>
+</html>

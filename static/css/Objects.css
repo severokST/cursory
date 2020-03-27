@@ -1,0 +1,17 @@
+.wall {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+
+.start {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: purple;
+    transition: opacity 0.2s;
+}
