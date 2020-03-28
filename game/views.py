@@ -9,9 +9,11 @@ from django.http import HttpResponse
 
 from .templates import *
 
-from .code.objects import Wall, Start
+from .code.level import load_level
 
 # Create your views here.
+
+
 
 
 
@@ -20,21 +22,10 @@ def game_view(request):
 
     template = loader.get_template('game.html')
 
-    wall_list = []
-    for i in range(0,20):
-        wall_list.append(Wall(i*50, 200))
-        wall_list.append(Wall(i * 50, 0))
-
-    wall_list.append(Wall(0, 50))
-    wall_list.append(Wall(0, 100))
-    wall_list.append(Wall(0, 150))
-
+    level_object_dict = load_level('static/gamedata/levels/test')
 
     context = {'data': None,
-               'objects':{
-                   'start':[Start(100,100)],
-                   'walls':wall_list
-               }
+               'objects':level_object_dict
                }
 
 

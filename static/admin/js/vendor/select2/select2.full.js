@@ -431,7 +431,7 @@ var requirejs, require, define;
             //do, and latest browsers "upgrade" to 4 if lower value is used:
             //http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dom-windowtimers-settimeout:
             //If want a value immediately, use require('id') instead -- something
-            //that works in almond on the global level, but not guaranteed and
+            //that works in almond on the global level.py, but not guaranteed and
             //unlikely to work in other AMD implementations.
             setTimeout(function () {
                 main(undef, deps, callback, relName);

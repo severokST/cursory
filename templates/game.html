@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<div class="gui_main_pane" onmousemove="move(event)">
+<div class="gui_main_pane" onmousemove="move(event)" ontransitionend="main_pane_restore_background()">
 
     {% for start in objects.start %}
         <div class="start" onclick="game_start()" style="left:{{ start.x }}px;top:{{ start.y }}px"></div>
